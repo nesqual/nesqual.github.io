@@ -1,4 +1,4 @@
-@import './assets/_Constants.scss';
+@use './assets/_Constants.scss' as *;
 
 :root {
   font-family: Zain, Verdana, Arial, sans-serif;
