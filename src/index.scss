@@ -1,0 +1,239 @@
+@import './assets/_Constants.scss';
+
+:root {
+  font-family: Zain, Verdana, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 1rem;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: $GreyPurple;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: $LightPurple;
+  text-decoration: inherit;
+}
+a:hover {
+  color: $StrongBlue;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: top;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 900;
+  font-family:
+    Genos,
+    Bruno Ace SC,
+    Zain,
+    Verdana,
+    Arial,
+    sans-serif;
+}
+
+h2 {
+  font-size: 2.1rem;
+  line-height: 0.8;
+  font-family:
+    Bruno Ace,
+    Bruno Ace SC,
+    Zain,
+    Verdana,
+    Arial,
+    sans-serif;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: $DarkPurple;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.global-nav-header {
+  font-family: Zain, Verdana, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  background-color: $DarkPurple;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 1em;
+
+  ul.global-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    li {
+      font-family:
+        Bruno Ace SC,
+        Zain,
+        Verdana,
+        Arial,
+        sans-serif;
+
+      font-size: 1.4rem;
+
+      a {
+        color: $StrongBlue;
+
+        &:hover {
+          color: $LightBlue;
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@font-face {
+  font-family: 'Bruno Ace';
+  src: url('./assets/fonts/BrunoAce-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bruno Ace SC';
+  src: url('./assets/fonts/BrunoAceSC-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bungee';
+  src: url('./assets/fonts/Bungee-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plaster';
+  src: url('./assets/fonts/Plaster-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('./assets/fonts/Zain-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('./assets/fonts/Zain-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('./assets/fonts/Zain-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('./assets/fonts/Zain-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('./assets/fonts/Zain-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('./assets/fonts/Zain-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('./assets/fonts/Zain-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Zain';
+  src: url('./assets/fonts/Zain-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Genos';
+  src: url('./assets/fonts/Genos-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* expose the weight axis */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Genos';
+  src: url('./assets/fonts/Genos-Italic-VariableFont_wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
