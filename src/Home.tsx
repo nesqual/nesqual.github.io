@@ -1,4 +1,4 @@
-import './Home.scss';
+import './Home.scss'
 
 function Home() {
   return (
@@ -6,7 +6,7 @@ function Home() {
       <h1>Nesqual</h1>
       <h2>By Nesqual</h2>
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home

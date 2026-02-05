@@ -40,10 +40,9 @@
     "bracketSameLine": false,
     "printWidth": 80,
     "proseWrap": "always",
-    "semi": true,
+    "semi": false,
     "singleQuote": true,
     "jsxSingleQuote": true,
-    "tsxSingleQuote": true,
     "tabWidth": 2,
     "trailingComma": "all",
     "useTabs": false

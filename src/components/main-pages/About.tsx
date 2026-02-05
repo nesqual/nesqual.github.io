@@ -1,4 +1,4 @@
-import './About.scss';
+import './About.scss'
 
 function About() {
   return (
@@ -6,7 +6,7 @@ function About() {
       <h1>About Nesqual</h1>
       <p>Nesqual is a project by Nesqual.</p>
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

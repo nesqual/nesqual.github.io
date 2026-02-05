@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import './index.scss';
 import Home from './Home.tsx';
-import About from './components/About.tsx';
+import About from './components/main-pages/About.tsx';
 import NesqualStarbird from './assets/images/Nesqual_Starbird_no-background.svg?react';
+import Articles from './components/main-pages/Articles.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
       </nav>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/articles' element={<Articles />} />
         <Route path='/about' element={<About />} />
       </Routes>
     </BrowserRouter>
