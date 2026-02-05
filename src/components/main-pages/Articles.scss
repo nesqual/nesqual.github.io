@@ -1,1 +1,35 @@
 @use '../../assets/Constants' as *;
+
+.articles-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .articles-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+
+        li {
+            list-style: none;
+            width: 100%;
+            border-bottom: 1px solid $StrongOrange;
+
+            &:first-child {
+                border-top: 1px solid $StrongOrange;
+            }
+
+            button {
+                width: 100%;
+                background: none;
+                border: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr 2fr;
+                align-items: center;
+                align-content: start;
+                justify-items: left;
+            }
+        }
+    }
+}

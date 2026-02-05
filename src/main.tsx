@@ -6,6 +6,7 @@ import Home from './Home.tsx'
 import About from './components/main-pages/About.tsx'
 import NesqualStarbird from './assets/images/Nesqual_Starbird_no-background.svg?react'
 import Articles from './components/main-pages/Articles.tsx'
+import ArticleViewer from './components/main-pages/ArticleViewer.tsx'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')!).render(
                 <Route path='/' element={<Home />} />
                 <Route path='/articles' element={<Articles />} />
                 <Route path='/about' element={<About />} />
+                <Route path='/articles/:id' element={<ArticleViewer />} />
             </Routes>
         </BrowserRouter>
     </StrictMode>,
