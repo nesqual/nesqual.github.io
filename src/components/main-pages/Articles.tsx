@@ -1,5 +1,5 @@
 import './Articles.scss'
-import { useAllArticles } from '../../hooks/useArticles'
+import { getAllArticlesSorted } from '../../hooks/useArticles'
 import { useNavigate } from 'react-router-dom'
 
 function Articles() {
@@ -11,11 +11,10 @@ function Articles() {
             <p>Articles content will be added here in the future.</p>
             <h3>Available Articles</h3>
             <ul className='articles-list'>
-                {useAllArticles().map((article) => (
+                {getAllArticlesSorted().map((article) => (
                     <li key={article.id}>
                         <button
                             onClick={() => {
-                                console.log('hi')
                                 navigate(`/articles/${article.id}`)
                             }}
                         >

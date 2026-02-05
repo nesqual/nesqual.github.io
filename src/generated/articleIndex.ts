@@ -6,9 +6,6 @@ export interface Article {
     id: string
     filename: string
     content: string
-    title: string
-    date: string
-    summary: string
     [key: string]: any
 }
 
@@ -17,9 +14,9 @@ export const articleIndex: Record<string, Article> = {
         id: 'test-article copy',
         filename: 'test-article copy.html',
         content: Article_testArticleCopy,
-        title: 'test article 2!!',
-        date: 'June 2, 2026',
-        summary: 'A brief summary of the test article.',
+        title: 'Sample Fake Article',
+        date: 'February 5, 2026',
+        summary: 'An example article for testing.',
     },
     'test-article': {
         id: 'test-article',

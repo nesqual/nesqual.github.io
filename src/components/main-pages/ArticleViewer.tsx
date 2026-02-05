@@ -1,11 +1,17 @@
-import { useParams } from 'react-router-dom'
-import { useArticle } from '../../hooks/useArticles'
+import { useNavigate, useParams } from 'react-router-dom'
+import {
+    hasPreviousArticle,
+    hasNextArticle,
+    getNextArticle,
+    getPreviousArticle,
+    getArticleById,
+} from '../../hooks/useArticles'
 import DOMPurify from 'dompurify'
 import './ArticleViewer.scss'
 
 function renderArticle(id: string) {
     const sanitizedArticleHtml = DOMPurify.sanitize(
-        useArticle(id)?.content || '',
+        getArticleById(id)?.content || '',
     )
 
     // Placeholder function to render article by ID
@@ -20,12 +26,31 @@ function renderArticle(id: string) {
 
 function ArticleViewer() {
     const { id } = useParams<{ id: string }>()
+    const navigate = useNavigate()
 
     return (
         <div className='article-viewer'>
             <div className='article-paginator'>
-                <button>Previous</button>
-                <button>Next</button>
+                <button
+                    disabled={!hasPreviousArticle(id ? id : 'unknown')}
+                    onClick={() =>
+                        navigate(
+                            `/articles/${id ? getPreviousArticle(id)?.id : 'unknown'}`,
+                        )
+                    }
+                >
+                    Previous
+                </button>
+                <button
+                    disabled={!hasNextArticle(id ? id : 'unknown')}
+                    onClick={() =>
+                        navigate(
+                            `/articles/${id ? getNextArticle(id)?.id : 'unknown'}`,
+                        )
+                    }
+                >
+                    Next
+                </button>
             </div>
             {renderArticle(id ? id : 'unknown')}
         </div>
