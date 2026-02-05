@@ -1,5 +1,5 @@
-import { getArticle, getAllArticles } from '../generated/articleIndex'
-import type { Article } from '../generated/articleIndex'
+import { getArticle, getAllArticles } from './articleIndex'
+import type { Article } from './articleIndex'
 
 /** Return a single article by id. */
 export const getArticleById = (id: string): Article | undefined =>
@@ -7,7 +7,7 @@ export const getArticleById = (id: string): Article | undefined =>
 
 /** Return the sorted list of all articles. */
 export const getAllArticlesSorted = (): Article[] =>
-    getAllArticles().sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+    getAllArticles().sort((a, b) => b.date.getTime() - a.date.getTime())
 
 /** Return the article that comes before the one with the given id. */
 export const getPreviousArticle = (

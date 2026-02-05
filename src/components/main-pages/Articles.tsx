@@ -1,5 +1,5 @@
 import './Articles.scss'
-import { getAllArticlesSorted } from '../../hooks/useArticles'
+import { getAllArticlesSorted } from '../../utils/useArticles'
 import { useNavigate } from 'react-router-dom'
 
 function Articles() {
@@ -19,7 +19,7 @@ function Articles() {
                             }}
                         >
                             <h4>{article.title}</h4>
-                            <p>{article.date}</p>
+                            <p>{article.date.toLocaleDateString()}</p>
                             <p>{article.summary}</p>
                         </button>
                     </li>

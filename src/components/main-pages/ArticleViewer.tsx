@@ -5,23 +5,12 @@ import {
     getNextArticle,
     getPreviousArticle,
     getArticleById,
-} from '../../hooks/useArticles'
-import DOMPurify from 'dompurify'
+} from '../../utils/useArticles'
 import './ArticleViewer.scss'
 
 function renderArticle(id: string) {
-    const sanitizedArticleHtml = DOMPurify.sanitize(
-        getArticleById(id)?.content || '',
-    )
-
     // Placeholder function to render article by ID
-    return (
-        <div
-            dangerouslySetInnerHTML={{
-                __html: sanitizedArticleHtml,
-            }}
-        ></div>
-    )
+    return <div>{getArticleById(id)?.articleFunc?.()}</div>
 }
 
 function ArticleViewer() {
