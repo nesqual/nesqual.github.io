@@ -4,7 +4,7 @@ import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import './index.scss'
 import Home from './Home.tsx'
 import About from './components/main-pages/About.tsx'
-import NesqualStarbird from './assets/images/Nesqual_Starbird_no-background.svg?react'
+import NesqualStarbird from './assets/images/Nesqual_Starbird_2-plain-no-background.svg'
 import Articles from './components/main-pages/Articles.tsx'
 import ArticleViewer from './components/main-pages/ArticleViewer.tsx'
 
@@ -12,7 +12,12 @@ createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <BrowserRouter>
             <nav className='global-nav-header'>
-                <NesqualStarbird id='nav-logo' width={50} height={50} />
+                <img
+                    id='nav-logo'
+                    width={50}
+                    height={50}
+                    src={NesqualStarbird}
+                />
                 <ul className='global-nav-list'>
                     <li>
                         <Link to='/'>Home</Link>

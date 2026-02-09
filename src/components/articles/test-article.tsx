@@ -1,4 +1,4 @@
-import starbird from '../../assets/images/Nesqual_Starbird_no-background.svg'
+import starbird from '../../assets/images/Nesqual_Starbird_2-plain-no-background.svg'
 import './test-article.scss'
 
 const testArticle = () => {
