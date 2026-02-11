@@ -25,7 +25,6 @@ export default function Speeches({ version = '' }: { version: string }) {
             if (!speechTimer.current) {
                 speechTimer.current = setTimeout(
                     () => {
-                        console.log('Switching speech')
                         setCurrentVersion((prev) =>
                             prev === 'nemik' ? 'maarva' : 'nemik',
                         )
@@ -91,7 +90,7 @@ export default function Speeches({ version = '' }: { version: string }) {
                     <p>
                         Strange, I... feel as if I can see it. I was six, I
                         think, first time I touched a funerary stone. Heard our
-                        music, felt our history, holding my sisters hand as we
+                        music, felt our history — holding my sisters hand as we
                         walked all the way from Fountain Square. Where you stand
                         now, I've been more times than I can remember.
                     </p>
@@ -99,23 +98,26 @@ export default function Speeches({ version = '' }: { version: string }) {
                     <p>
                         I always wanted to be lifted. I was always eager, always
                         waiting to be inspired. I remember every time it
-                        happened, every time the dead lifted me... with their
+                        happened, every time the dead lifted me: with their
                         truth. And now I'm dead, and I yearn to lift you. Not
                         because I want to shine or even be remembered. It's
-                        because I want you to go on. I want Ferric to continue.
+                        because I want you to go on. I want Ferrix to continue.
                         In my waining hours, thats what comforts me most.
                     </p>
 
                     <p>
                         But I fear for you. We've been sleeping. We've had each
-                        other, and Ferrix, our work, our days. We had each other
+                        other, and Ferrix, our work, our days; we had each other
                         and they left us alone. We kept the trade lane open, and
                         they left us alone. We took their money and ignored
-                        them, we kept their engine churning, and the moment they
-                        pulled away, we forgot them. Because we had each other.
-                        We had Ferrix. But we were sleeping. I've been sleeping.
-                        And I've been turning away from the truth I wanted not
-                        to face.
+                        them, we kept their engines churning, and the moment
+                        they pulled away, we forgot them. Because we had each
+                        other. We had Ferrix.
+                    </p>
+
+                    <p>
+                        But we were sleeping. I've been sleeping. And I've been
+                        turning away from the truth I wanted not to face:
                     </p>
 
                     <p>
