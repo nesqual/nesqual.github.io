@@ -130,7 +130,7 @@ export default function Speeches({ version = '' }: { version: string }) {
 
                     <p>
                         The Empire is a disease that thrives in darkness, it is
-                        never more alive than when we asleep. It's easy for the
+                        never more alive than when we sleep. It's easy for the
                         dead to tell you to fight, and maybe it's true, maybe
                         fighting is useless. Perhaps it's too late. But I'll
                         tell you this, if I could do it again, I'd wake up early
