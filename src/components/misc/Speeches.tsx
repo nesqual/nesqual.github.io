@@ -19,6 +19,8 @@ export default function Speeches({ version = '' }: { version: string }) {
     }, [version])
 
     useEffect(() => {
+        if (!currentVersion) return
+
         if (!repeatSame.current) {
             if (!speechTimer.current) {
                 speechTimer.current = setTimeout(
