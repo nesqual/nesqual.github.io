@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './Speeches.scss'
 import classNames from 'classnames'
 
 export default function Speeches({ version = '' }: { version: string }) {
     const [currentVersion, setCurrentVersion] = useState('')
+    const repeatSame = useRef(false)
+    const speechTimer = useRef<number | null>(null)
 
     useEffect(() => {
         if (version !== 'nemik' && version !== 'maarva') {
@@ -12,8 +14,26 @@ export default function Speeches({ version = '' }: { version: string }) {
             )
         } else {
             setCurrentVersion(version)
+            repeatSame.current = true
         }
     }, [version])
+
+    useEffect(() => {
+        if (!repeatSame.current) {
+            if (!speechTimer.current) {
+                speechTimer.current = setTimeout(
+                    () => {
+                        console.log('Switching speech')
+                        setCurrentVersion((prev) =>
+                            prev === 'nemik' ? 'maarva' : 'nemik',
+                        )
+                        speechTimer.current = null
+                    },
+                    currentVersion === 'nemik' ? 100_000 : 130_000,
+                )
+            }
+        }
+    }, [currentVersion])
 
     const renderSpeech = (speech: string) => {
         if (speech === 'nemik') {
