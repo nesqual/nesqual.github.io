@@ -9,46 +9,51 @@ import NesqualStarbird from './assets/images/Nesqual_Starbird_2-plain-no-backgro
 import Articles from './components/main-pages/Articles.tsx'
 import ArticleViewer from './components/main-pages/ArticleViewer.tsx'
 
-createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-        <BrowserRouter>
-            <div id='global-container'>
-                <nav className='global-nav-header'>
-                    <img
-                        id='nav-logo'
-                        width={50}
-                        height={50}
-                        src={NesqualStarbird}
-                    />
-                    <ul className='global-nav-list'>
-                        <li>
-                            <Link to='/'>Home</Link>
-                        </li>
-                        <li>
-                            <Link to='/articles'>Articles</Link>
-                        </li>
-                        <li>
-                            <Link to='/about'>About</Link>
-                        </li>
-                    </ul>
-                    <div className='global-nav-right'>
-                        <Link id='global-nav-right-text' to='/'>
-                            Nesqual
-                        </Link>
-                    </div>
-                </nav>
-                <div id='global-content-window'>
-                    <Routes>
-                        <Route path='/' element={<Home />} />
-                        <Route path='/articles' element={<Articles />} />
-                        <Route path='/about' element={<About />} />
-                        <Route
-                            path='/articles/:id'
-                            element={<ArticleViewer />}
+export default function App() {
+    return (
+        <StrictMode>
+            <BrowserRouter>
+                <div id='global-container'>
+                    <nav className='global-nav-header'>
+                        <img
+                            id='nav-logo'
+                            width={50}
+                            height={50}
+                            src={NesqualStarbird}
+                            title={'Fight the Empire!'}
                         />
-                    </Routes>
+                        <ul className='global-nav-list'>
+                            <li>
+                                <Link to='/'>Home</Link>
+                            </li>
+                            <li>
+                                <Link to='/articles'>Articles</Link>
+                            </li>
+                            <li>
+                                <Link to='/about'>About</Link>
+                            </li>
+                        </ul>
+                        <div className='global-nav-right'>
+                            <Link id='global-nav-right-text' to='/'>
+                                Nesqual
+                            </Link>
+                        </div>
+                    </nav>
+                    <div id='global-content-window'>
+                        <Routes>
+                            <Route path='/' element={<Home />} />
+                            <Route path='/articles' element={<Articles />} />
+                            <Route path='/about' element={<About />} />
+                            <Route
+                                path='/articles/:id'
+                                element={<ArticleViewer />}
+                            />
+                        </Routes>
+                    </div>
                 </div>
-            </div>
-        </BrowserRouter>
-    </StrictMode>,
-)
+            </BrowserRouter>
+        </StrictMode>
+    )
+}
+
+createRoot(document.getElementById('root')!).render(<App />)
