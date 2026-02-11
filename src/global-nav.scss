@@ -4,6 +4,8 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
+    min-width: fit-content;
+    width: 100%;
 }
 
 .global-nav-header {
@@ -77,5 +79,7 @@
 #global-content-window {
     flex: 1;
     overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 100%;
     padding: 0 2rem;
 }
