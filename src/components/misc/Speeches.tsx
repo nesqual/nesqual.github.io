@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Speeches.scss'
+import classNames from 'classnames'
 
 export default function Speeches({ version = '' }: { version: string }) {
     const [currentVersion, setCurrentVersion] = useState('')
@@ -67,10 +68,10 @@ export default function Speeches({ version = '' }: { version: string }) {
 
                     <p>
                         Strange, I... feel as if I can see it. I was six, I
-                        think, first time i touched a funerary stone. Heard our
+                        think, first time I touched a funerary stone. Heard our
                         music, felt our history, holding my sisters hand as we
                         walked all the way from Fountain Square. Where you stand
-                        now, I've been more times than i can remember.
+                        now, I've been more times than I can remember.
                     </p>
 
                     <p>
@@ -78,8 +79,8 @@ export default function Speeches({ version = '' }: { version: string }) {
                         waiting to be inspired. I remember every time it
                         happened, every time the dead lifted me... with their
                         truth. And now I'm dead, and I yearn to lift you. Not
-                        because i want to shine or even be remembered. It's
-                        because i want you to go on. I want Ferric to continue.
+                        because I want to shine or even be remembered. It's
+                        because I want you to go on. I want Ferric to continue.
                         In my waining hours, thats what comforts me most.
                     </p>
 
@@ -119,7 +120,14 @@ export default function Speeches({ version = '' }: { version: string }) {
 
     return (
         <div className='speeches-container'>
-            <div className='speech'>{renderSpeech(currentVersion)}</div>
+            <div
+                className={classNames('speech', {
+                    nemik: currentVersion === 'nemik',
+                    maarva: currentVersion === 'maarva',
+                })}
+            >
+                {renderSpeech(currentVersion)}
+            </div>
             <div className='stars'></div>
         </div>
     )
