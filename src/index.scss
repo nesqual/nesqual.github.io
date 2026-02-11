@@ -16,6 +16,13 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body,
+#root {
+    height: 100vh;
+    min-width: 200px;
+}
+
 a {
     font-weight: 500;
     color: $LightPurple;
@@ -82,49 +89,6 @@ button:focus-visible {
     margin: 0;
     padding: 0;
     text-align: center;
-}
-
-.global-nav-header {
-    font-family: Zain, Verdana, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    background-color: $DarkPurple;
-    box-shadow: 0 2px 4px rgba($DarkPurple, 0.5);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    gap: 1em;
-
-    ul.global-nav-list {
-        list-style: none;
-        margin: 0;
-        margin-left: 0.7rem;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-
-        li {
-            font-family:
-                Bruno Ace SC,
-                Zain,
-                Verdana,
-                Arial,
-                sans-serif;
-
-            font-size: 1.4rem;
-
-            a {
-                color: $StrongBlue;
-
-                &:hover {
-                    color: $LightBlue;
-                }
-            }
-        }
-    }
 }
 
 @media (prefers-color-scheme: light) {
