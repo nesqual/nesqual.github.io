@@ -36,11 +36,15 @@
         }
     }
 
-    #nav-logo {
-        transition: filter 1s;
-        cursor: pointer;
-        &:hover {
-            filter: drop-shadow(0 0 0.5rem rgba($LightBlue, 0.9));
+    #nav-logo-wrapper {
+        display: flex;
+
+        #nav-logo {
+            transition: filter 1s;
+            cursor: pointer;
+            &:hover {
+                filter: drop-shadow(0 0 0.5rem rgba($LightBlue, 0.9));
+            }
         }
     }
 

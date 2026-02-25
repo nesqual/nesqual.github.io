@@ -15,13 +15,15 @@ export default function App() {
             <BrowserRouter>
                 <div id='global-container'>
                     <nav className='global-nav-header'>
-                        <img
-                            id='nav-logo'
-                            width={50}
-                            height={50}
-                            src={NesqualStarbird}
-                            title={'Fight the Empire!'}
-                        />
+                        <Link id='nav-logo-wrapper' to='/'>
+                            <img
+                                id='nav-logo'
+                                width={50}
+                                height={50}
+                                src={NesqualStarbird}
+                                title={'Fight the Empire!'}
+                            />
+                        </Link>
                         <ul className='global-nav-list'>
                             <li>
                                 <Link to='/'>Home</Link>
