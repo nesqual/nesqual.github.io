@@ -22,7 +22,7 @@ function Home() {
 
             <div id='highlighted-content-section'>
                 <Link
-                    to={'/'}
+                    to={`/articles/${latestArticle?.id}`}
                     id='latest-article'
                     className='highlighted-content-item'
                 >
