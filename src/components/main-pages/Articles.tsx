@@ -7,7 +7,6 @@ function Articles() {
 
     return (
         <div className='articles-page'>
-            <h1>Articles Page</h1>
             <p>Articles content will be added here in the future.</p>
             <h3>Available Articles</h3>
             <ul className='articles-list'>

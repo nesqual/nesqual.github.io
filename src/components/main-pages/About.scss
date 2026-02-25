@@ -1,0 +1,27 @@
+@use '../../assets/Constants' as *;
+
+#about-page {
+    margin: 5rem auto;
+    .about-title {
+        font-family: 'Genos';
+        font-weight: 800;
+        color: transparent;
+        background: linear-gradient(
+            290deg,
+            $StrongerOrange 20%,
+            $StrongerBlue 60%,
+            $LightBlue 70%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+    .nesqual-starbird {
+        width: 10rem;
+        rotate: -42deg;
+        transition: transform 1.5s ease;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
+}

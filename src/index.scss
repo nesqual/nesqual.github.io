@@ -8,7 +8,7 @@
 
     color-scheme: light dark;
     color: rgba($OffWhite, 0.87);
-    background-color: $GreyPurple;
+    background: linear-gradient(0deg, $GreyerPurple, $GreyPurple);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;

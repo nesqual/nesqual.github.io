@@ -1,6 +1,7 @@
 @use '../../assets/Constants.scss' as *;
 
 .speeches-container {
+    margin: 2rem auto;
     position: relative;
     perspective: 1000px;
     display: flex;
@@ -18,6 +19,7 @@
     border: 1px solid $CrawlYellow;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0.3rem 0.3rem 3rem $DarkPurple;
 
     .speech {
         position: absolute;
