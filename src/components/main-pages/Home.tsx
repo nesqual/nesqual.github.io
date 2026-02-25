@@ -34,7 +34,17 @@ function Home() {
                     ></img>
                 </Link>
                 <div id='other-articles' className='highlighted-content-item'>
-                    Second
+                    <h2>Other Articles</h2>
+                    <ul>
+                        {getAllArticlesSorted().map((article) => (
+                            <li key={article.id}>
+                                <Link to={`/articles/${article.id}`}>
+                                    <h4>{article.title}</h4>
+                                    <p>{article.date.toLocaleDateString()}</p>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
                 <div id='other-highlight' className='highlighted-content-item'>
                     Third
