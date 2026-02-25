@@ -66,6 +66,27 @@
                 sans-serif;
 
             font-size: 1.4rem;
+
+            a {
+                margin-bottom: -2px;
+                &:after {
+                    content: '';
+                    display: block;
+                    position: relative;
+                    background: $StrongBlue;
+                    width: 0%;
+                    height: 2px;
+                    bottom: -1.3rem;
+
+                    transition: width 0.3s;
+                }
+
+                &.active {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 
