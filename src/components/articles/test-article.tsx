@@ -19,8 +19,9 @@ const testArticle = () => {
 
 testArticle.meta = {
     title: 'Test article #1',
-    date: 'January 1, 2026',
+    date: 'March 1, 2026',
     summary: 'A brief summary of the test article.',
+    image: starbird,
 }
 
 export default testArticle

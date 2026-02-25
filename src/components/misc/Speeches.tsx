@@ -2,7 +2,15 @@ import { useEffect, useRef, useState } from 'react'
 import './Speeches.scss'
 import classNames from 'classnames'
 
-export default function Speeches({ version = '' }: { version: string }) {
+export default function Speeches({
+    version = '',
+    className = undefined,
+    id = undefined,
+}: {
+    version: string
+    className?: string
+    id?: string
+}) {
     const [currentVersion, setCurrentVersion] = useState('')
     const repeatSame = useRef(false)
     const speechTimer = useRef<number | null>(null)
@@ -143,7 +151,7 @@ export default function Speeches({ version = '' }: { version: string }) {
     }
 
     return (
-        <div className='speeches-container'>
+        <div className={classNames('speeches-container', className)} id={id}>
             <div
                 className={classNames('speech', {
                     nemik: currentVersion === 'nemik',
