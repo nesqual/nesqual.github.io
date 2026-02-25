@@ -111,6 +111,27 @@
         #other-highlight {
             grid-column: 4/6;
             grid-row: 3/5;
+
+            h2 {
+                font-size: 1.9rem;
+            }
+
+            .socials-list {
+                margin-top: 0.5rem;
+                display: flex;
+                flex-direction: row;
+                gap: 1.5rem;
+
+                a {
+                    * {
+                        width: 4.5rem;
+                        height: 4.5rem;
+                        color: $LightBlue;
+                        fill: $LightBlue;
+                        background-color: transparent;
+                    }
+                }
+            }
         }
     }
 }
